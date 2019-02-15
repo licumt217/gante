@@ -57,7 +57,7 @@ app.use(hotMiddleware)
 
 
 
-app.use(express.static('tcapi_web'));
+app.use(express.static('gante'));
 
 
 // app.get('/', function (req,res,next) {

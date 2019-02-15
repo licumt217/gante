@@ -17,7 +17,7 @@ test/unit/coverage
 .idea/inspectionProfiles/Project_Default.xml
 .idea/jsLibraryMappings.xml
 .idea/jsLinters/jshint.xml
-tcapi_web/
+gante/
 .idea/codeStyleSettings.xml
 .idea/*
 yarn.lock

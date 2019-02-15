@@ -113,7 +113,7 @@ const parkingReport_ownReport = r => require.ensure([], () => r(require('../page
 const renbao_exchange = r => require.ensure([], () => r(require('../pages/renbao/exchange')), 'renbao_exchange')
 
 const router = new VueRouter({
-    base: 'tcapi_web',
+    base: 'gante',
     mode: 'history',
     saveScrollPosition: true,
     routes: [
@@ -606,7 +606,7 @@ const router = new VueRouter({
                 title: ''
             }
         },
-        
+
         {
             path: '/parkingReport/generateReport',
             component: parkingReport_generateReport,
@@ -642,8 +642,8 @@ const router = new VueRouter({
                 title: ''
             }
         },
-        
-        
+
+
 
     ]
 })
