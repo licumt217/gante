@@ -1,0 +1,25 @@
+.tjd_btn_long(@backgroundColor,@backgroundColorOfActive){
+  text-align: center!important;
+  color: #fff;
+  border: none;
+  width: 94%!important;;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 1.2em auto;
+  outline: none;
+  background: @backgroundColor;
+  font-weight: 500;
+  letter-spacing: 1px;
+  :active{
+    background: @backgroundColorOfActive;
+  }
+}
+
+.tjd_btn_long_orange{
+  .tjd_btn_long(#ffae00,#EF971C);
+}
+.tjd_btn_long_blue{
+  .tjd_btn_long(#5dccdb,#32b9cb);
+}

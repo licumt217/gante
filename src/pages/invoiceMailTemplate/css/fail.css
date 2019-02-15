@@ -1,0 +1,112 @@
+@import "reset.css";
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    display:box;
+    display:-webkit-box;
+    display:-o-box;
+    display:-moz-box;
+    display:-ms-box;
+    -webkit-box-flex:1;
+    -o-box-flex:1;
+    -ms-box-flex:1;
+    box-flex:1;
+    -webkit-box-orient: vertical;
+    -o-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select:none;
+    font-family: 'Microsoft YaHei','Heiti SC',simhei,'Lucida Sans Unicode','Myriad Pro','Hiragino Sans GB',Verdana;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.wrapper{
+    position: absolute;
+    z-index: 0;
+    bottom:0;
+    top:0;
+    overflow-y: auto;
+    left: 0;
+    width: 100%;
+}
+.content{
+    width: 85%;
+    margin: 0 auto;
+}
+header{
+    height: 6em;
+    line-height: 6em;
+    border-bottom: solid 1px #d7d7d7;
+}
+header p{
+    float: left;
+}
+header p img{
+    width: 120px;
+    vertical-align: middle;
+}
+header p:last-child{
+    float: right;
+    color: #B6B6B6;
+    font-size: 15px;
+    padding-top: 2em;
+    text-align: right;
+    letter-spacing: 1px;
+}
+header p:last-child span{
+    display: block;
+    line-height: 20px!important;
+}
+article{
+    height: 6.5em;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: solid 1px #d7d7d7;
+    line-height: 6.5em;
+}
+article h1{
+    font-size: 20px;
+}
+.explain{
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #333333;
+}
+.explain h2{
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+}
+.explain h3{
+    padding-top: 1em;
+}
+.reason{
+    padding-bottom: 1em;
+}
+.attachment{
+    /*position: absolute;*/
+    /*bottom: 3em;*/
+    padding-top: 3em;
+    line-height: 30px;
+    font-size: 15px;
+    color: #333;
+}
+@media screen and (max-width: 320px){
+    article{
+        height: 5em;
+        line-height: 5em;
+    }
+    .explain h2{
+        padding-top: 1em;
+    }
+    .explain h3{
+        padding-top: 0.5em;
+    }
+    .attachment{
+        padding-top: 1em;
+        line-height: 25px;
+        font-size: 15px;
+        color: #333;
+    }
+}

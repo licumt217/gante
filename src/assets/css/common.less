@@ -1,0 +1,147 @@
+@import "reset.less";
+@import "buttons.less";
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display:box;
+    display:-webkit-box;
+    display:-o-box;
+    display:-moz-box;
+    display:-ms-box;
+    -webkit-box-flex:1;
+    -o-box-flex:1;
+    -ms-box-flex:1;
+    box-flex:1;
+    -webkit-box-orient: vertical;
+    -o-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-sizing:1;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select:none;
+    font-family: "PingFang SC","San Francisco","Helvetica Neue", Helvetica, Tahoma, Arial,"Microsoft YaHei","Hiragino Sans GB","Heiti SC",sans-serif;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    background: #fff;
+}
+
+.tjd_none{
+    display:none;
+}
+#wrapper,.wrapper{
+    position: absolute;
+    z-index: 0;
+    bottom:0;
+    top:0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: 0;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+#mainBody,.mainBody{
+    display:none;
+}
+.tjdHidden{
+    display: none;
+}
+//img[src=""]{opacity: 0;}
+.blg-loading {
+
+  &-float{
+    position: absolute;
+    z-index: 99;
+    opacity: 0.3;
+    background: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  &-dots{
+    position: fixed;
+    width: 80px;
+    top: 35%;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  &-dot {
+    width: 15px;
+    height: 15px;
+    background: #3ac;
+    border-radius: 100%;
+    display: inline-block;
+    animation: slide 1s infinite;
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+      background: #32aacc;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+      background: #64aacc;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+      background: #96aacc;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+      background: #c8aacc;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.5s;
+      background: #faaacc;
+    }
+  }
+
+  @-moz-keyframes slide {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @-o-keyframes slide {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes slide {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

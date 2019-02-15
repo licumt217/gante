@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+</body>
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    function isTest () {
+        return location.href.indexOf('prep.tingjiandan.com')!==-1;
+    }
+    var orderNo=getQueryString('orderNo');
+    if(isTest()){
+        location.href='https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2015091600291029&auth_skip=false&scope=auth_base&redirect_uri=https://prep.tingjiandan.com/tcapi_web/activity/zmxySuccess?orderNo='+orderNo;
+    }else{
+        location.href='https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2015091600291075&auth_skip=false&scope=auth_base&redirect_uri=https://open.tingjiandan.com/tcapi_web/activity/zmxySuccess?orderNo='+orderNo;
+    }
+
+
+
+
+
+</script>
+
+</html>

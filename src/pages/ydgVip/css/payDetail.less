@@ -1,0 +1,203 @@
+
+.wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #ebebeb;
+    .order h5 span {
+        float: right;
+        img {
+            width: 45px;
+            margin-top: -6px;
+        }
+    }
+    .parkingMoney {
+        height: 52px;
+        line-height: 52px;
+        border-bottom: solid 1px #e0e0e0;
+        border-top: solid 1px #e0e0e0;
+        margin-top: 16px;
+    }
+    .preferential {
+        padding: 15px 0;
+        border-bottom: solid 1px #e0e0e0;
+        p{
+            height: 24px;
+            line-height: 24px;
+            margin-top: 0;
+            .money {
+                color: #f74924;
+            }
+        }
+    }
+    .deduction {
+        background: #CECCCF;
+        height: 155px;
+        width: 100%;
+        .deductionInfo {
+            height: 145px;
+            background: url(../images/couponBox.png) no-repeat;
+            background-size: 100% 100%;
+            margin: 5px 1%;
+            position: absolute;
+            width: 98%;
+            p {
+                font-size: 14px;
+                color: #1E1E1E;
+                height: 42px;
+                line-height: 42px;
+                margin: 0 5%;
+                border-bottom: solid 1px #e0e0e0;
+                &:last-child {
+                    border: none;
+                    height: 50px;
+                    line-height: 50px;
+                }
+                .problemIcon {
+                    width: 15px;
+                    margin: 14px 0 0 6px;
+                }
+                .numButton {
+                    display: inline-block;
+                    width: 80px;
+                    font-weight: normal;
+                    font-size: 14px;
+                    margin: 0 8px;
+                }
+                .numJia,.numJian{
+                    width: 23px;
+                    height: 23px;
+                    display: inline-block;
+                    margin: 10px 6.5px;
+                    border: none;
+                    outline: none;
+
+                }
+                .numJian {
+                    background: url(../images/jianActive.png) no-repeat;
+                    background-size: 100% 100%;
+                    float: left;
+                }
+                .disabled{
+                    background: url(../images/jian.png) no-repeat;
+                    background-size: 100% 100%;
+                    float: left;
+                }
+                .numJia {
+                    background: url(../images/jiaActive.png) no-repeat;
+                    background-size: 100% 100%;
+                    float: right;
+                }
+                .deductionIcon {
+                    width: 28px;
+                    margin: 15px 3px 0 0;
+                }
+                .couponIcon {
+                    width: 28px;
+                    margin: 18px 3px 0 0;
+                }
+                span {
+                    float: right;
+                }
+            }
+        }
+    }
+    .payMoney {
+        background: #ffffff;
+        padding: 15px 5%;
+        font-size: 14px;
+        span {
+            float: right;
+            color: #c39f6b;
+        }
+    }
+    .sure{
+        padding: 10px 0;
+        font-size: 14px;
+        background: #E1BB8E;
+        border-radius: 10px;
+        width: 60%;
+        margin: -10px 20% 20px;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.couponBoxList{
+    height: 85%;
+    overflow-y: auto;
+    padding-top: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 78px;
+}
+
+.couponBox p {
+    padding: 25px 0 0 24px!important;
+    float: left;
+    color: #141414;
+    font-size: 14px;
+}
+
+.couponBox p time {
+    display: block;
+    color: #141414;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.couponBox p time i {
+    font-style: normal;
+}
+
+.state {
+    display: block;
+    float: right;
+    line-height: 88px;
+    margin-right: 13%!important;
+    font-size: 12px;
+    color: #000;
+}
+
+.couponPrice {
+    font-size: 25px;
+    color: #c39f6b;
+    margin-right: 3px;
+}
+
+.noUseCoupon {
+    width: 100%;
+    height: 78px;
+    line-height: 78px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    .selectNobtn{
+        color: #c39f6b;
+        width: 60%;
+        padding: 12px 0!important;
+        border: solid 1px #c39f6b!important;
+        border-radius: 10px;
+        color: #c39f6b;
+        line-height: normal;
+        background: #fff;
+        margin: 20px 20%;
+        z-index: 999;
+    }
+}
+
+
+/*modalContent样式*/
+.modalMsgContent{
+    text-align: center;
+    //height: 50px;
+    line-height: 20px;
+    padding: 15px 0;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

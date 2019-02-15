@@ -1,0 +1,212 @@
+.eightDiscount{
+    width: 45%;
+    position: absolute;
+    right: 3%;
+    bottom: 21.3em;
+    z-index: 999;
+}
+.bgShadow{
+    width: 90%;
+    height:2.5em;
+    margin: 3em auto 0 auto;
+    background: #705818;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 2.5em;
+}
+/*车牌键盘输入区域总体样式*/
+.prePayKbdCmpContainer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+}
+.prePayKbdCarInput{
+    background: #e4af2b;
+    height: 60px;
+    width: 99%;
+    margin: -1em auto 0 auto;
+    display: -webkit-box;
+    border-radius:12px;
+    border:none;
+    text-align: center;
+    border-bottom: dashed 1px #504120;
+}
+.prePayKbdCarDiv{
+    height: 0;
+    width: 99%;
+    margin: -1em auto 0 auto;
+    display: -webkit-box;
+    border-radius:12px;
+    border:none;
+    text-align: center;
+
+}
+.prePayKbdCarDiv img{
+    height: 65px;
+    position: absolute;
+    top: -50px;
+}
+.prePayLeftImg{
+    position: absolute;
+    right: -1px;
+}
+.prePayRightImg{
+    position: absolute;
+    left: -2px;
+}
+/*车牌键盘输入区域按钮样式*/
+.prePayKbdCarInput input {
+    border: none;
+    text-align: center;
+    line-height: 2em;
+    outline: none;
+    -webkit-box-flex: 1;
+    width: 2.5em;
+    display: block;
+    font-size: 18px;
+    color: #323234;
+    font-family: "microsoft yahei";
+    background: url("../../assets/images/prePayKbdCmp/line2.png") no-repeat right center;
+}
+.prePayKbdCarDiv div {
+    border: none;
+    text-align: center;
+    line-height: 2em;
+    outline: none;
+    -webkit-box-flex: 1;
+    width: 2.5em;
+    display: block;
+    font-size: 18px;
+    color: #323234;
+    font-family: "microsoft yahei";
+    position: relative;
+}
+.prePayKbdCarInput input:last-child{
+    background: none;
+}
+
+
+/*车牌键盘输入区域按钮激活样式*/
+.prePayActiveCommon {
+    background: #D09D21!important;
+    background-size: 100% 100%!important;
+    text-align: center;
+    margin: 0 0!important;
+    line-height: 2em;
+    outline: none;
+    -webkit-box-flex: 1;
+    display: block;
+    border-top-left-radius: 12px!important;
+    border-top-right-radius: 12px!important;
+    margin-left: -1px!important;
+}
+.prePayActiveFirst {
+    background: #D09D21!important;
+    background-size: 100% 100%!important;
+    text-align: center;
+    margin: 0 0!important;
+    line-height: 2em;
+    outline: none;
+    -webkit-box-flex: 1;
+    display: block;
+    border-top-left-radius: 12px!important;
+    border-top-right-radius: 12px!important;
+    border-bottom-left-radius: 12px!important;
+    /*border-bottom-right-radius: 12px!important;*/
+    /*margin-left: -1px!important;*/
+}
+
+.prePayActiveLast{
+    background: #D09D21!important;
+    background-size: 100% 100%!important;
+    text-align: center;
+    margin: 0 0!important;
+    line-height: 2em;
+    outline: none;
+    -webkit-box-flex: 1;
+    display: block;
+    border-top-left-radius: 12px!important;
+    border-top-right-radius: 12px!important;
+    border-bottom-right-radius: 12px!important;
+    margin-left: -1px!important;
+}
+/*
+键盘样式*/
+.prePayKbdMainArea{
+    height: auto;
+    width: 99%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin: 16px auto 0 auto;
+    background: url("../../assets/images/prePayKbdCmp/bg_local.png") repeat-x;
+}
+.prePayKbdMainCarnum,.prePayKbdMainBottomCarnum{
+    height: auto;
+    padding: 0.5em 0 0.5em 0;
+    z-index: 9999;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.prePayKbdMainRow,.keyboard_main_en_row{
+    width: 98%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2%;
+    display: -webkit-box;
+
+}
+.prePayKbdMainRow input,.keyboard_main_en_row input{
+    border: none;
+    background: none;
+    color: #504120;
+    outline: none;
+    height: 40px;
+    background: #d29f20;
+    margin: 0 0.3%;
+    line-height: 40px;
+    border-radius: 3px;
+    -webkit-box-flex: 1;
+    display: block;
+    font-size: 18px;
+    font-family: "microsoft yahei";
+}
+.prePayKbdZhBtn:active,.keyboardbtn_row:active{
+    background: #D09D21!important;
+    color: #fff;
+    height: 40px;
+}
+.prePayDelButton img{
+    width: 2em;
+    vertical-align: middle;
+    padding: 0 8px;
+}
+.prePayDelButton{
+    line-height:40px;
+    display: block;
+    height: 40px;
+    background: #d29f20;
+}
+.prePayDelButton:active{
+    background: #D09D21!important;
+}
+.prePayKbdSure{
+    text-align: center;
+    color: #504120;
+    border: none;
+    width: 90%;
+    line-height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin:0 5% 1em 5%;
+    outline: none;
+    background: #d29f20;
+    height: 45px;
+    font-family: "Microsoft YaHei";
+    letter-spacing: 1px;
+}
+.prePayKbdSure:active{
+    background: #D09D21;
+}
+

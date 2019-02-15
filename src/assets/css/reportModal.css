@@ -1,0 +1,277 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.h1, h1 {
+    font-size: 36px
+}
+
+.h2, h2 {
+    font-size: 30px
+}
+
+.h3, h3 {
+    font-size: 24px
+}
+
+.h4, h4 {
+    font-size: 18px
+}
+
+.h5, h5 {
+    font-size: 14px
+}
+
+.h6, h6 {
+    font-size: 12px
+}
+
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear
+}
+
+.fade.in {
+    opacity: 1
+}
+
+
+.btn {
+    width: 46%;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-appearance: none!important;
+    outline: none;
+}
+
+.btn.red{
+    background: #fff;
+    border: 1px solid #e1bb8e;
+    color: #e1bb8e;
+    outline: none;
+}
+.btn.blue{
+    color: #fff;
+    background:url(../../assets/images/parkingReport/modalButton.png) no-repeat;
+    background-size: 100% 100%;
+    height: 90px;
+    line-height: 102px;
+    width: 60%;
+    margin: -14px 0 14px -8%;
+    padding-left: 17%;
+    font-size: 15px;
+    font-weight: 500;
+    border:none;
+    outline: none!important;
+}
+
+.btn.disabled, .btn[disabled]{
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65
+}
+
+a.btn.disabled{
+    pointer-events: none
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0
+}
+
+.reportModal-open {
+    overflow: hidden
+}
+
+.reportModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0
+}
+
+.reportModal.fade .reportModal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%)
+}
+
+.reportModal.in .reportModal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.reportModal-open .reportModal {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.reportModal-dialog {
+    position: relative;
+    width: auto;
+    margin: 60% 8% 0;
+}
+.reportModal-dialog.reportModal-top{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.reportModal-dialog.reportModal-lg{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.reportModal-dialog.reportModal-sm{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.reportModal-content {
+    position: relative;
+    background:url(../images/parkingReport/modalBg.png) no-repeat;
+    background-size: 100% 100%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+}
+.reportModal-content >>> p{
+    color: #00D4E8;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+.reportModal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000
+}
+
+.reportModal-backdrop.fade {
+    filter: alpha(opacity=0);
+    opacity: 0
+}
+
+.reportModal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5
+}
+
+.reportModal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border:none;
+}
+
+
+.reportModal-title {
+    margin: 0;
+    line-height: 1.42857143
+}
+.reportModal-title img{
+    width: 70px;
+    margin-top: 15px;
+}
+
+.reportModal-body {
+    position: relative;
+    padding: 0;
+}
+
+.reportModal-footer {
+    padding: 0;
+    text-align: center;
+    border-top:none;
+}
+
+.reportModal-footer .btn+.btn {
+    margin-bottom: 0;
+    margin-left: 5px
+}
+
+.reportModal-footer .btn-group .btn+.btn {
+    margin-left: -1px
+}
+
+.reportModal-footer .btn-block+.btn-block {
+    margin-left: 0
+}
+
+.reportModal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll
+}
+
+@media (min-width:768px) {
+    .reportModal-dialog {
+        width: 600px;
+        margin: 30px auto
+    }
+    .reportModal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+    }
+    .reportModal-sm {
+        width: 300px
+    }
+}
+
+@media (min-width:992px) {
+    .reportModal-lg {
+        width: 900px
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付宝服务窗原声效果</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="browsermode" content="application">
+    <meta name="msapplication-tap-highlight" content="no">
+</head>
+<body>
+
+<h1>点击以下按钮看不同效果</h1>
+<a href="javascript:void(0)" class="alert">点击Alert</a>
+<a href="javascript:void(0)" class="confirm">点击Confirm</a>
+
+<a href="javascript:void(0)" class="prompt">点击prompt</a>
+
+<h1>点击以下按钮看不同效果</h1>
+<a href="javascript:void(0)" class="success">显示成功信息</a>
+<a href="javascript:void(0)" class="fail">显示失败信息</a>
+<a href="javascript:void(0)" class="exception">显示异常信息</a>
+<a href="javascript:void(0)" class="none">只显示信息</a>
+<a href="javascript:void(0)" class="duration">3.5s信息显示</a>
+
+
+
+
+
+
+
+<script>
+    function ready(callback) {
+        // 如果jsbridge已经注入则直接调用
+        if (window.AlipayJSBridge) {
+            callback && callback();
+        } else {
+            // 如果没有注入则监听注入的事件
+            document.addEventListener('AlipayJSBridgeReady', callback, false);
+        }
+    }
+    ready(function(){
+        document.querySelector('.alert').addEventListener('click', function(){
+            AlipayJSBridge.call('alert', {
+                title: '亲',
+                message: '你好',
+                button: '确定'
+            }, function(e){
+                alert('回调结果：' + JSON.stringify(e))
+            });
+        });
+
+        document.querySelector('.confirm').addEventListener('click', function(){
+            AlipayJSBridge.call('confirm', {
+                title: '亲',
+                message: '确定要退出吗？',
+                okButton: '是',
+                cancelButton: '否'
+            }, function(e){
+                alert('回调结果：' + JSON.stringify(e))
+            });
+        });
+    });
+
+
+    function ready1(callback) {
+        // 如果jsbridge已经注入则直接调用
+        if (window.AlipayJSBridge) {
+            callback && callback();
+        } else {
+            // 如果没有注入则监听注入的事件
+            document.addEventListener('AlipayJSBridgeReady', callback, false);
+        }
+    }
+    ready1(function(){
+        document.querySelector('.prompt').addEventListener('click', function(){
+            AlipayJSBridge.call('prompt', {
+                title: '亲',
+                message: '确定要这么干吧',
+                okButton: '确定',
+                cancelButton: '算了',
+                placeholder:'placeholder'
+            }, function (result) {
+                // result.ok     bool型  用户是否点击确定
+                // result.inputValue     用户输入的内容
+                if (result.ok) {
+                    document.querySelector('.result').textContent = result.inputValue;
+                }
+            });
+        });
+    });
+
+    function toast(config, callback){
+        AlipayJSBridge.call('toast',config, callback);
+    }
+
+    function ready2(callback) {
+        // 如果jsbridge已经注入则直接调用
+        if (window.AlipayJSBridge) {
+            callback && callback();
+        } else {
+            // 如果没有注入则监听注入的事件
+            document.addEventListener('AlipayJSBridgeReady', callback, false);
+        }
+    }
+    ready2(function(){
+        document.querySelector('.success').addEventListener('click', function(){
+            toast({
+                content: '操作成功',
+                type: 'success'
+            });
+        });
+
+        document.querySelector('.fail').addEventListener('click', function(){
+            toast({
+                content: '网络繁忙，请稍后再试',
+                type: 'fail'
+            });
+        });
+
+        document.querySelector('.exception').addEventListener('click', function(){
+            toast({
+                content: '发生异常，请注意',
+                type: 'exception'
+            });
+        });
+
+        document.querySelector('.none').addEventListener('click', function(){
+            toast({
+                content: '欢迎光临',
+            });
+        });
+
+        document.querySelector('.duration').addEventListener('click', function(){
+            toast({
+                content: '请稍等',
+                duration: 3500,
+            }, function(e){
+                alert('toast消失回调');
+            });
+        });
+    });
+
+
+</script>
+</body>
+</html>
